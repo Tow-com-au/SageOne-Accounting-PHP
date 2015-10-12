@@ -1,7 +1,16 @@
 {
     "name": "tow-com-au/sageone-php",
     "description": "SageOne Accounting API Wrapper (PHP)",
+    "authors": [
+        {
+            "name": "Sharn White",
+            "email": "sharnw@tow.com.au"
+        }
+    ],
     "require": {
-        "php": ">=5.3.0",
+        "php": ">=5.3.0"
+    },
+    "autoload": {
+        "psr-0": {"Sage\\": "src/"}
     }
 }

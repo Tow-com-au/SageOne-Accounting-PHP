@@ -1,6 +1,6 @@
 <?php
 
-require_once('../lib/Sage.php');
+require_once('../src/Sage.php');
 
 // NOTE: you will have a different endpoint depending on your country
 $apiEndpoint = 'https://accounting.sageone.com.au/api/1.1.1';
