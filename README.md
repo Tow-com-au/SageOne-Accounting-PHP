@@ -35,10 +35,9 @@ php ./composer.phar install
 ## 3. Usage
 To login to the SageOne API you will need two things. First, an 'AuthCode', which can be generated from your login details in the format base64_encode('username:password'), and second, an API key as requested from SageOne.
 
-#### Instantiate the main api instance
+#### Create client library instance
 
 ```
-
 // You will need to include this autoload script manually
 // if you don't have any autoloader setup.
 include "../path/to/vendor/autoload.php"; 
@@ -47,20 +46,17 @@ include "../path/to/vendor/autoload.php";
 // https://accounting.sageone.co.za/Marketing/DeveloperProgram.aspx
 $apiKey = '{api key goes here}';
 $authCode = base64_encode('username:password');
+
 // SageOne will provide you with a localised endpoint url:
 $apiEndpoint = 'https://accounting.sageone.com.au/api/1.1.1';
 
-$companyId = false; // We don't have this yet, first you need to list your Companies
+$companyId = false; // We don't have this yet
 
 $debug = true;
-
 $client = new Sage($apiEndpoint, $apiKey, $authCode, $companyId, $debug);
 
-
-...
-
 ```
-####  List your companies
+####  List your Company entities
 ```
 $result = $client->listItems('Company');
 if (!empty($result)) {
@@ -70,6 +66,9 @@ if (!empty($result)) {
 	$client = new Sage($apiEndpoint, $apiKey, $authCode, $companyId, $debug);
 }
 
+```
+####  Create a Customer entity
+```
 // Create a customer
 $customer_details = [
     'Name' => 'Test Customer',
