@@ -1,0 +1,7 @@
+{
+    "name": "tow-com-au/sageone-php",
+    "description": "SageOne Accounting API Wrapper (PHP)",
+    "require": {
+        "php": ">=5.3.0",
+    }
+}
